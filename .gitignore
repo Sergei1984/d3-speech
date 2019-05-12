@@ -1,3 +1,8 @@
+# App
+
+/dist
+/.cache
+
 # Logs
 logs
 *.log
