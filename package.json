@@ -26,9 +26,12 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
+    "remark": "^10.0.1",
+    "remark-html": "^9.0.0",
     "typescript": "^3.4.5"
   },
   "devDependencies": {
-    "less": "^3.9.0"
+    "less": "^3.9.0",
+    "marked": "^0.6.2"
   }
 }

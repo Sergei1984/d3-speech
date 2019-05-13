@@ -24,7 +24,10 @@ export function ChapterPageBase({
                 <Link to={`${urlBase}/md`}>Slide</Link>
             </div>
             {match.params.tab === "md" && (
-                <div className="ChapterPage__md">{md}</div>
+                <div
+                    className="ChapterPage__md"
+                    dangerouslySetInnerHTML={{ __html: md }}
+                />
             )}
             {match.params.tab !== "md" && children}
         </div>
