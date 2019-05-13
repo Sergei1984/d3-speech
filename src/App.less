@@ -27,6 +27,25 @@
     &__menu {
         grid-area: nav;
         background: @color3;
+        margin: 0;
+        padding: 1.5rem;
+
+        li {
+            list-style-type: none;
+            margin-bottom: 1rem;
+        }
+
+        a,
+        a:hover,
+        a:link,
+        a:visited {
+            text-decoration: none;
+            color: @color1;
+        }
+
+        a.active {
+            color: @color4;
+        }
     }
 
     &__content {
