@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Link, match } from "react-router-dom";
 import "./ChapterPageBase.less";
+import { Markdown } from "../components";
 import cn from "classnames";
 
 export interface ChapterPageProps {
@@ -42,10 +43,7 @@ export function ChapterPageBase({
             </div>
 
             {isMdTabActive && (
-                <div
-                    className="ChapterPage__content md"
-                    dangerouslySetInnerHTML={{ __html: md }}
-                />
+                <Markdown className="ChapterPage__content md" markdown={md} />
             )}
             {!isMdTabActive && (
                 <div className="ChapterPage__content result">{children}</div>
