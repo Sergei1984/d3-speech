@@ -6,7 +6,7 @@ import md from "./Intro.md";
 
 export function Intro(props: RouteChildrenProps<{ tab: string }>) {
     return (
-        <ChapterPageBase {...props} md={md} title="Intro: What is D3">
+        <ChapterPageBase {...props} md={md} title="Intro">
             <div>Some result</div>
         </ChapterPageBase>
     );

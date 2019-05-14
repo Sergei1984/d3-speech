@@ -1,6 +1,6 @@
 import * as React from "react";
 import "./App.less";
-import { BrowserRouter, NavLink, Route } from "react-router-dom";
+import { BrowserRouter, NavLink, Route, Redirect } from "react-router-dom";
 import { Intro, D3WithReact } from "./chapters";
 
 export function App() {

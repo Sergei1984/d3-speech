@@ -40,15 +40,16 @@ export function ChapterPageBase({
                     Slide
                 </Link>
             </div>
-            <div className="ChapterPage__content">
-                {isMdTabActive && (
-                    <div
-                        className="ChapterPage__md"
-                        dangerouslySetInnerHTML={{ __html: md }}
-                    />
-                )}
-                {!isMdTabActive && children}
-            </div>
+
+            {isMdTabActive && (
+                <div
+                    className="ChapterPage__content md"
+                    dangerouslySetInnerHTML={{ __html: md }}
+                />
+            )}
+            {!isMdTabActive && (
+                <div className="ChapterPage__content result"> children</div>
+            )}
         </div>
     );
 }
