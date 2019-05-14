@@ -48,7 +48,7 @@ export function ChapterPageBase({
                 />
             )}
             {!isMdTabActive && (
-                <div className="ChapterPage__content result"> children</div>
+                <div className="ChapterPage__content result">{children}</div>
             )}
         </div>
     );
