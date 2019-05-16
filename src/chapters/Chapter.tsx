@@ -1,6 +1,6 @@
 import * as React from "react";
 import { match } from "react-router-dom";
-import "./ChapterPageBase.less";
+import "./Chapter.less";
 
 export interface ChapterProps {
     title: string;
@@ -10,11 +10,11 @@ export interface ChapterProps {
 
 export function Chapter({ title, match, children }: ChapterProps) {
     return (
-        <div className="ChapterPage">
-            <div className="ChapterPage__header">
-                <span className="ChapterPage__title">{title}</span>
+        <div className="Chapter">
+            <div className="Chapter__header">
+                <span className="Chapter__title">{title}</span>
             </div>
-            <div className="ChapterPage__content result">{children}</div>
+            <div className="Chapter__content md">{children}</div>
         </div>
     );
 }
