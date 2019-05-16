@@ -27,6 +27,7 @@ export function D3WithReact(props: RouteChildrenProps<{ tab: string }>) {
                     Smaller application size: don't inlcudes unnecessary D3
                     parts
                 </li>
+                <li>Server-side rendering, rendering without browser</li>
             </ul>
             <h2>Cons:</h2>
             <ul>

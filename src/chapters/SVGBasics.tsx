@@ -3,7 +3,7 @@ import { useState } from "react";
 import { RouteChildrenProps } from "react-router";
 import { Chapter } from "./Chapter";
 
-import { Markdown } from "../components";
+import { Markdown, CodeBlock } from "../components";
 
 export function SVGBasics(props: RouteChildrenProps<{ tab: string }>) {
     const [viewbox, setViewbox] = useState("0 0 500 500");
@@ -12,25 +12,28 @@ export function SVGBasics(props: RouteChildrenProps<{ tab: string }>) {
 
     return (
         <Chapter {...props} title="SVG Basicis">
+            <h2>&lt;svg&gt; element</h2>
+            <ul>
+                <li>Root tag for SVG document </li>
+                <li>
+                    SVG can be used as a children of HTML tag as well as other
+                    HTML elements
+                </li>
+            </ul>
+            <CodeBlock language="html">
+                {`
+<svg version="1.1"
+     baseProfile="full"
+     width="300" height="200"
+     xmlns="http://www.w3.org/2000/svg">
+    <rect width="100%" height="100%" fill="red" />
+    <circle cx="150" cy="100" r="80" fill="green" />
+    <text x="150" y="125" font-size="60" text-anchor="middle" fill="white">SVG</text>
+</svg>
+                `}
+            </CodeBlock>
             <Markdown>
                 {`
-## &lt;svg&gt; element
-
-* Root tag for SVG document
-* SVG can be used as a children of HTML tag as well as other HTML elements
-
-\`\`\`html
-<div>
-    <svg version="1.1"
-    baseProfile="full"
-    width="300" height="200"
-    xmlns="http://www.w3.org/2000/svg">
-        <rect width="100%" height="100%" fill="red" />
-        <circle cx="150" cy="100" r="80" fill="green" />
-        <text x="150" y="125" font-size="60" text-anchor="middle" fill="white">SVG</text>
-    </svg>
-</div>
-\`\`\`
             `}
             </Markdown>
             <svg
@@ -54,6 +57,8 @@ export function SVGBasics(props: RouteChildrenProps<{ tab: string }>) {
             </svg>
             <Markdown>
                 {`
+
+
 * SVG Coordinate system:
 
   ![SVG Coordinates](https://developer.mozilla.org/@api/deki/files/78/=Canvas_default_grid.png)

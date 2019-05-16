@@ -17,7 +17,7 @@ export function Markdown({ children, className }: MarkdownProps) {
         if (ref.current) {
             const codeBlocks = Array.from(ref.current.querySelectorAll("code"));
             for (const code of codeBlocks) {
-                highlight.highlightBlock(code);
+                // highlight.highlightBlock(code);
             }
         }
     }, [children]);
