@@ -2,13 +2,15 @@ import * as React from "react";
 import { useEffect, useRef } from "react";
 import highlight from "highlight.js";
 import "highlight.js/styles/vs.css";
+import remark from "remark";
+import remarkHtml from "remark-html";
 
 export interface MarkdownProps {
-    markdown: string;
+    children: string;
     className?: string;
 }
 
-export function Markdown({ markdown, className }: MarkdownProps) {
+export function Markdown({ children, className }: MarkdownProps) {
     const ref = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -18,13 +20,18 @@ export function Markdown({ markdown, className }: MarkdownProps) {
                 highlight.highlightBlock(code);
             }
         }
-    }, [markdown]);
+    }, [children]);
+
+    const html = remark()
+        .use(remarkHtml)
+        .processSync(children);
+
     return (
         <div
             ref={ref}
             className={className}
             dangerouslySetInnerHTML={{
-                __html: markdown
+                __html: html
             }}
         />
     );

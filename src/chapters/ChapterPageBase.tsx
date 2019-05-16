@@ -43,7 +43,7 @@ export function ChapterPageBase({
             </div>
 
             {isMdTabActive && (
-                <Markdown className="ChapterPage__content md" markdown={md} />
+                <Markdown className="ChapterPage__content md">{md}</Markdown>
             )}
             {!isMdTabActive && (
                 <div className="ChapterPage__content result">{children}</div>

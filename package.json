@@ -32,7 +32,9 @@
     "react-router-dom": "^5.0.0",
     "remark": "^10.0.1",
     "remark-html": "^9.0.0",
-    "typescript": "^3.4.5"
+    "remark-parse": "^6.0.3",
+    "typescript": "^3.4.5",
+    "unified": "^7.1.0"
   },
   "devDependencies": {
     "less": "^3.9.0",
