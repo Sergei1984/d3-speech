@@ -18,6 +18,7 @@
     "skipLibCheck": true,
     "alwaysStrict": true,
     "downlevelIteration": true,
+    "resolveJsonModule": true,
     "lib": [
       "es5", "es6", "dom"
     ],

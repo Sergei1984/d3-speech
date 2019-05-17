@@ -3,6 +3,7 @@ import { renderToStaticMarkup } from "react-dom/server";
 import cn from "classnames";
 import { useState } from "react";
 import { CodeBlock } from "./CodeBlock";
+import pretty from "pretty";
 
 export interface SvgViewProps {
     children: string | React.ReactElement;
@@ -16,7 +17,9 @@ export function SvgView({ children, className, defaultMode }: SvgViewProps) {
     const svgString =
         typeof children === "string"
             ? children
-            : renderToStaticMarkup(children);
+            : pretty(renderToStaticMarkup(children), {
+                  ocd: true
+              });
 
     return (
         <div className={cn("SvgView", className)}>
