@@ -1,16 +1,15 @@
 import * as React from "react";
 import { useState } from "react";
-import { RouteChildrenProps } from "react-router";
 import { SvgView } from "../components";
 import { Chapter } from "./Chapter";
 
-export function SVGBasics(props: RouteChildrenProps<{ tab: string }>) {
+export function C2_SvgGeometry() {
     const [viewbox, setViewbox] = useState("0 0 500 200");
     const [align, setAlign] = useState("none");
     const [meetOrSlice, setMeetOrSlice] = useState("meet");
 
     return (
-        <Chapter {...props} title="SVG Basicis">
+        <Chapter title="SVG Basicis">
             <h2>&lt;svg&gt; element</h2>
             <ul>
                 <li>Root tag for SVG document </li>
@@ -108,8 +107,8 @@ export function SVGBasics(props: RouteChildrenProps<{ tab: string }>) {
                 <text
                     x="150"
                     y="125"
-                    font-size="60"
-                    text-anchor="middle"
+                    fontSize="60"
+                    textAnchor="middle"
                     fill="gray"
                 >
                     SVG

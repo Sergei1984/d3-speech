@@ -1,14 +1,12 @@
 import * as React from "react";
-import { match } from "react-router-dom";
 import "./Chapter.less";
 
 export interface ChapterProps {
     title: string;
-    match: match<{ tab: string }>;
     children: React.ReactChild | React.ReactChild[];
 }
 
-export function Chapter({ title, match, children }: ChapterProps) {
+export function Chapter({ title, children }: ChapterProps) {
     return (
         <div className="Chapter">
             <div className="Chapter__header">

@@ -1,10 +1,9 @@
 import * as React from "react";
-import { RouteChildrenProps } from "react-router";
 import { Chapter } from "./Chapter";
 
-export function Intro(props: RouteChildrenProps<{ tab: string }>) {
+export function C1_Intro() {
     return (
-        <Chapter {...props} title="Intro">
+        <Chapter title="Intro">
             <h2>What is D3</h2>
             <ul>
                 <li>

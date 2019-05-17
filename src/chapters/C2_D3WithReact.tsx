@@ -1,10 +1,9 @@
 import * as React from "react";
-import { RouteChildrenProps } from "react-router";
 import { Chapter } from "./Chapter";
 
-export function D3WithReact(props: RouteChildrenProps<{ tab: string }>) {
+export function C2_D3WithReact() {
     return (
-        <Chapter {...props} title="D3 + React">
+        <Chapter title="D3 + React">
             <h2>Use D3 for:</h2>
             <ul>
                 <li>Interpolating values to document (chart) dimensions </li>
