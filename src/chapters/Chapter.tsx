@@ -12,7 +12,7 @@ export function Chapter({ title, children }: ChapterProps) {
             <div className="Chapter__header">
                 <span className="Chapter__title">{title}</span>
             </div>
-            <div className="Chapter__content md">{children}</div>
+            <div className="Chapter__content slide">{children}</div>
         </div>
     );
 }
