@@ -1,7 +1,12 @@
 import * as React from "react";
 import { BrowserRouter, NavLink, Route } from "react-router-dom";
 import "./App.less";
-import { C1_Intro, C2_D3WithReact, C2_SvgGeometry } from "./chapters";
+import {
+    C1_Intro,
+    C2_D3WithReact,
+    C3_SvgGeometry,
+    C4_SvgShapes
+} from "./chapters";
 
 export function App() {
     return (
@@ -22,10 +27,14 @@ export function App() {
                     <li>
                         <NavLink to="/svg-geometry/">3. SVG Geometry</NavLink>
                     </li>
+                    <li>
+                        <NavLink to="/svg-shapes/">4. SVG Shapes</NavLink>
+                    </li>
                 </ul>
                 <div className="App__content">
                     <Route path="/d3-with-react" component={C2_D3WithReact} />
-                    <Route path="/svg-geometry" component={C2_SvgGeometry} />
+                    <Route path="/svg-geometry" component={C3_SvgGeometry} />
+                    <Route path="/svg-shapes" component={C4_SvgShapes} />
                     <Route path="/" exact component={C1_Intro} />
                 </div>
             </div>

@@ -3,7 +3,7 @@ import { useState } from "react";
 import { SvgView } from "../components";
 import { Chapter } from "./Chapter";
 
-export function C2_SvgGeometry() {
+export function C3_SvgGeometry() {
     const [viewbox, setViewbox] = useState("0 0 500 200");
     const [align, setAlign] = useState("none");
     const [meetOrSlice, setMeetOrSlice] = useState("meet");
@@ -36,7 +36,6 @@ export function C2_SvgGeometry() {
             <img
                 alt="SVG Coordinate system"
                 src="https://developer.mozilla.org/@api/deki/files/78/=Canvas_default_grid.png"
-                style={{ width: "50%" }}
             />
             <p>SVG canvas is infinite</p>
             <h3>
