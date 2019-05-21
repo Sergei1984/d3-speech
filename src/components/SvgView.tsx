@@ -17,9 +17,7 @@ export function SvgView({ children, className, defaultMode }: SvgViewProps) {
     const svgString =
         typeof children === "string"
             ? children
-            : pretty(renderToStaticMarkup(children), {
-                  ocd: true
-              });
+            : putAttributesOnNewLine(pretty(renderToStaticMarkup(children)));
 
     return (
         <div className={cn("SvgView", className)}>
@@ -56,5 +54,26 @@ export function SvgView({ children, className, defaultMode }: SvgViewProps) {
                     <div className="SvgView__image">{children}</div>
                 ))}
         </div>
+    );
+}
+
+function putAttributesOnNewLine(code: string): string {
+    return (
+        code
+            .split("\n")
+            // Put closing tag on new line
+            .map(line =>
+                line
+                    .replace("><", ">\n<")
+                    .splitAndPad("\n")
+                    .flatten()
+            )
+            .flatten()
+            // Put attributes on new line
+            .map(line => {
+                return [line];
+            })
+            .flatten()
+            .join("\n")
     );
 }
