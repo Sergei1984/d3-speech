@@ -5,7 +5,8 @@ import {
     C1_Intro,
     C2_D3WithReact,
     C3_SvgGeometry,
-    C4_SvgShapes
+    C4_SvgShapes,
+    C5_LineChart
 } from "./chapters";
 
 export function App() {
@@ -30,11 +31,15 @@ export function App() {
                     <li>
                         <NavLink to="/svg-shapes/">4. SVG Shapes</NavLink>
                     </li>
+                    <li>
+                        <NavLink to="/line-chart/">5. Line Chart</NavLink>
+                    </li>
                 </ul>
                 <div className="App__content">
                     <Route path="/d3-with-react" component={C2_D3WithReact} />
                     <Route path="/svg-geometry" component={C3_SvgGeometry} />
                     <Route path="/svg-shapes" component={C4_SvgShapes} />
+                    <Route path="/line-chart" component={C5_LineChart} />
                     <Route path="/" exact component={C1_Intro} />
                 </div>
             </div>

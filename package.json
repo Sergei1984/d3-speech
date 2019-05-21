@@ -18,6 +18,7 @@
   "homepage": "https://github.com/Sergei1984/d3-speech#readme",
   "dependencies": {
     "@types/classnames": "^2.2.7",
+    "@types/d3": "^5.7.2",
     "@types/highlight.js": "^9.12.3",
     "@types/pretty": "^2.0.0",
     "@types/react": "^16.8.17",
@@ -25,6 +26,7 @@
     "@types/react-router": "^5.0.0",
     "@types/react-router-dom": "^4.3.3",
     "classnames": "^2.2.6",
+    "d3": "^5.9.2",
     "highlight.js": "^9.15.6",
     "parcel-bundler": "^1.12.3",
     "prettier": "^1.17.0",
