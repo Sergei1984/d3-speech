@@ -4,7 +4,7 @@ import * as React from "react";
 import { useEffect, useRef } from "react";
 
 export interface CodeBlockProps {
-    language: "html" | "xml" | "typescript";
+    language: "html" | "xml" | "typescript" | "json";
     children: string;
 }
 
