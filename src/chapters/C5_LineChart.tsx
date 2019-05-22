@@ -1,12 +1,11 @@
+import { line, scaleLinear, scalePoint } from "d3";
 import * as React from "react";
-import { Chapter } from "./Chapter";
-
+import { AutoScaleSvg, CodeBlock, Collapsible } from "../components";
+import { Cluster, DataSet, get2dDataSubset } from "../data";
 import * as ds from "../data/suicide_rate.json";
-import { get2dDataSubset, DataSet, Cluster } from "../data";
-import { CodeBlock, Collapsible, AutoScaleSvg } from "../components";
-
-import { extent, scaleLinear, line } from "d3";
 import { ElementOf } from "../utils/Array.prototype.flatten";
+import { Chapter } from "./Chapter";
+import "./C5_LineChart.less";
 
 const dataSet = ds as DataSet<
     "GHO" | "PUBLISHSTATE" | "YEAR" | "REGION" | "COUNTRY" | "SEX"
@@ -26,12 +25,14 @@ const RIGHT = WIDTH - LEFT;
 const BOTTOM = HEIGHT - TOP;
 
 export function C5_LineChart() {
-    const years = extent(data.data, e => parseInt(e.dim));
+    // const years = extent(data.data, e => parseInt(e.dim));
 
-    console.log(years);
+    // const yearScale = scaleLinear()
+    //     .domain(years)
+    //     .range([LEFT, RIGHT]);
 
-    const yearScale = scaleLinear()
-        .domain(years)
+    const yearScale = scalePoint()
+        .domain(data.dimensionValues)
         .range([LEFT, RIGHT]);
 
     const rateScale = scaleLinear()
@@ -39,11 +40,11 @@ export function C5_LineChart() {
         .range([BOTTOM, TOP]);
 
     const rateLine = line<ElementOf<typeof data.data>>()
-        .x(v => yearScale(parseInt(v.dim)))
+        .x(v => yearScale(v.dim))
         .y(v => rateScale(v.value));
 
     return (
-        <Chapter title="Line Chart">
+        <Chapter title="Line Chart" className="C5_LineChart">
             <h3>Line chart: Suicide rate per 100K population (all sexes)</h3>
             <Collapsible title="Chart Data" defaultIsExpanded={false}>
                 <CodeBlock language="json">
@@ -51,6 +52,61 @@ export function C5_LineChart() {
                 </CodeBlock>
             </Collapsible>
             <AutoScaleSvg viewportWidth={WIDTH} viewportHeight={HEIGHT}>
+                {/* Horizontal axis */}
+                <line
+                    className="axis"
+                    x1={LEFT}
+                    x2={RIGHT}
+                    y1={BOTTOM}
+                    y2={BOTTOM}
+                />
+                {/* Horizontal ticks and tick labels */}
+                {data.dimensionValues.map(year => (
+                    <React.Fragment key={year}>
+                        <line
+                            className="axis"
+                            y1={BOTTOM}
+                            y2={BOTTOM + 0.5}
+                            x1={yearScale(year)}
+                            x2={yearScale(year)}
+                        />
+                        <text
+                            className="axis-label"
+                            x={yearScale(year)}
+                            y={BOTTOM + 0.6}
+                        >
+                            {year}
+                        </text>
+                    </React.Fragment>
+                ))}
+                {/* Vertical axis */}
+                <line
+                    className="axis"
+                    x1={LEFT}
+                    x2={LEFT}
+                    y1={TOP}
+                    y2={BOTTOM}
+                />
+                {/* Horizontal ticks and tick labels */}
+                {rateScale.ticks().map(value => (
+                    <React.Fragment key={value}>
+                        <line
+                            className="axis"
+                            x1={LEFT - 0.5}
+                            x2={LEFT}
+                            y1={rateScale(value)}
+                            y2={rateScale(value)}
+                        />
+                        <text
+                            className="axis-label"
+                            textAnchor="end"
+                            x={LEFT - 0.6}
+                            y={rateScale(value)}
+                        >
+                            {value}
+                        </text>
+                    </React.Fragment>
+                ))}
                 <path
                     fill="none"
                     stroke="red"
