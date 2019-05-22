@@ -1,4 +1,4 @@
-import { line, scaleLinear, scalePoint, max } from "d3";
+import { line, scaleLinear, scalePoint, max, curveNatural } from "d3";
 import * as React from "react";
 import { AutoScaleSvg, CodeBlock, Collapsible } from "../components";
 import data from "../data/ukraine_salary.json";
@@ -30,11 +30,12 @@ export function C5_LineChart() {
 
     const salaryLine = line<ElementOf<typeof data>>()
         .x(v => yearScale(v.Year.toString()))
-        .y(v => salaryScale(v.SalaryUSD));
+        .y(v => salaryScale(v.SalaryUSD))
+        .curve(curveNatural);
 
     return (
         <Chapter title="Line Chart" className="C5_LineChart">
-            <h3>Line chart: Suicide rate per 100K population (all sexes)</h3>
+            <h3>Avg salary in Ukraine per year, USD</h3>
             <Collapsible title="Chart Data" defaultIsExpanded={false}>
                 <CodeBlock language="json">
                     {JSON.stringify(data, undefined, 2)}
