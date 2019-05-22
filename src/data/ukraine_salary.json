@@ -1,0 +1,170 @@
+[
+    {
+        "Year": 1992,
+        "SalaryUah": 1523.5,
+        "SalaryUSD": 3.81,
+        "ConsumerAmount": 4.76
+    },
+    {
+        "Year": 1993,
+        "SalaryUah": 14204,
+        "SalaryUSD": 3.55,
+        "ConsumerAmount": 4.44
+    },
+    {
+        "Year": 1994,
+        "SalaryUah": 745523,
+        "SalaryUSD": 4.66,
+        "ConsumerAmount": 5.82
+    },
+    {
+        "Year": 1995,
+        "SalaryUah": 32.08,
+        "SalaryUSD": 12.53,
+        "ConsumerAmount": 15.66
+    },
+    {
+        "Year": 1996,
+        "SalaryUah": 103.28,
+        "SalaryUSD": 25.82,
+        "ConsumerAmount": 15.19
+    },
+    {
+        "Year": 1997,
+        "SalaryUah": 126.68,
+        "SalaryUSD": 30.16,
+        "ConsumerAmount": 17.74
+    },
+    {
+        "Year": 1998,
+        "SalaryUah": 136.82,
+        "SalaryUSD": 31.1,
+        "ConsumerAmount": 18.29
+    },
+    {
+        "Year": 1999,
+        "SalaryUah": 177.52,
+        "SalaryUSD": 38.59,
+        "ConsumerAmount": 22.7
+    },
+    {
+        "Year": 2000,
+        "SalaryUah": 230.13,
+        "SalaryUSD": 47.94,
+        "ConsumerAmount": 28.2
+    },
+    {
+        "Year": 2001,
+        "SalaryUah": 311.08,
+        "SalaryUSD": 59.82,
+        "ConsumerAmount": 35.19
+    },
+    {
+        "Year": 2002,
+        "SalaryUah": 376.38,
+        "SalaryUSD": 69.7,
+        "ConsumerAmount": 41
+    },
+    {
+        "Year": 2003,
+        "SalaryUah": 468.54,
+        "SalaryUSD": 66.93,
+        "ConsumerAmount": 39.37
+    },
+    {
+        "Year": 2004,
+        "SalaryUah": 520.54,
+        "SalaryUSD": 80.08,
+        "ConsumerAmount": 36.4
+    },
+    {
+        "Year": 2005,
+        "SalaryUah": 970.92,
+        "SalaryUSD": 142.78,
+        "ConsumerAmount": 64.9
+    },
+    {
+        "Year": 2006,
+        "SalaryUah": 1200.54,
+        "SalaryUSD": 166.74,
+        "ConsumerAmount": 75.79
+    },
+    {
+        "Year": 2007,
+        "SalaryUah": 1560.7,
+        "SalaryUSD": 210.91,
+        "ConsumerAmount": 95.87
+    },
+    {
+        "Year": 2008,
+        "SalaryUah": 2028.91,
+        "SalaryUSD": 266.96,
+        "ConsumerAmount": 121.35
+    },
+    {
+        "Year": 2009,
+        "SalaryUah": 2637.59,
+        "SalaryUSD": 338.15,
+        "ConsumerAmount": 153.71
+    },
+    {
+        "Year": 2010,
+        "SalaryUah": 3428.86,
+        "SalaryUSD": 428.61,
+        "ConsumerAmount": 267.88
+    },
+    {
+        "Year": 2011,
+        "SalaryUah": 4114.63,
+        "SalaryUSD": 514.33,
+        "ConsumerAmount": 321.46
+    },
+    {
+        "Year": 2012,
+        "SalaryUah": 4526.1,
+        "SalaryUSD": 502.9,
+        "ConsumerAmount": 314.31
+    },
+    {
+        "Year": 2013,
+        "SalaryUah": 4978.71,
+        "SalaryUSD": 553.19,
+        "ConsumerAmount": 345.74
+    },
+    {
+        "Year": 2014,
+        "SalaryUah": 5227.64,
+        "SalaryUSD": 435.64,
+        "ConsumerAmount": 272.27
+    },
+    {
+        "Year": 2015,
+        "SalaryUah": 5489.03,
+        "SalaryUSD": 249.5,
+        "ConsumerAmount": 231.02
+    },
+    {
+        "Year": 2016,
+        "SalaryUah": 8456.53,
+        "SalaryUSD": 352.36,
+        "ConsumerAmount": 326.26
+    },
+    {
+        "Year": 2017,
+        "SalaryUah": 9302.18,
+        "SalaryUSD": 372.09,
+        "ConsumerAmount": 344.53
+    },
+    {
+        "Year": 2018,
+        "SalaryUah": 10232.4,
+        "SalaryUSD": 378.98,
+        "ConsumerAmount": 350.91
+    },
+    {
+        "Year": 2019,
+        "SalaryUah": 11255.64,
+        "SalaryUSD": 401.99,
+        "ConsumerAmount": 372.21
+    }
+]
