@@ -9,3 +9,4 @@ export * from "./C6_2_CreateSVG";
 export * from "./C6_3_DefineBounds";
 export * from "./C6_4_DrawAxis";
 export * from "./C6_5_DefineScales";
+export * from "./C6_6_DrawTicks";

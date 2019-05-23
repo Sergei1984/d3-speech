@@ -34,6 +34,11 @@ export function C6_ChartBuildingAlgorithm() {
                         Define scales
                     </NavLink>
                 </li>
+                <li>
+                    <NavLink to="/chart-building-algorithm/draw-ticks">
+                        Draw ticks
+                    </NavLink>
+                </li>
             </ol>
         </Chapter>
     );

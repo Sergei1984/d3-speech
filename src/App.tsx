@@ -12,7 +12,8 @@ import {
     C6_2_CreateSVG,
     C6_3_DefineBounds,
     C6_4_DrawAxis,
-    C6_5_DefineScales
+    C6_5_DefineScales,
+    C6_6_DrawTicks
 } from "./chapters";
 
 export function App() {
@@ -67,6 +68,11 @@ export function App() {
                                     5.5 Define scales
                                 </NavLink>
                             </li>
+                            <li>
+                                <NavLink to="/chart-building-algorithm/draw-ticks">
+                                    5.6 Draw ticks
+                                </NavLink>
+                            </li>
                         </ul>
                     </li>
                     <li>
@@ -102,6 +108,10 @@ export function App() {
                     <Route
                         path="/chart-building-algorithm/define-scales"
                         component={C6_5_DefineScales}
+                    />
+                    <Route
+                        path="/chart-building-algorithm/draw-ticks"
+                        component={C6_6_DrawTicks}
                     />
                     <Route path="/" exact component={C1_Intro} />
                 </div>
