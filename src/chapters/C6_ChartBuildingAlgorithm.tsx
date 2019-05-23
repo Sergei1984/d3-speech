@@ -72,10 +72,21 @@ function LineChart() {
                 y2={BOTTOM}
             />
             {/* Left axis */}
+            <line
+                className="axis"
+                x1={LEFT}
+                x2={LEFT}
+                y1={TOP}
+                y2={BOTTOM}
+            />
         </svg>
     );
 }
             `}</CodeBlock>
+            <h3>5. Create scales for horizontal and vertical coordinates</h3>
+            <p>
+                <a href="https://github.com/d3/d3-scale">Scale is D3</a>{" "}
+            </p>
         </Chapter>
     );
 }
