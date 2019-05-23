@@ -39,6 +39,11 @@ export function C6_ChartBuildingAlgorithm() {
                         Draw ticks
                     </NavLink>
                 </li>
+                <li>
+                    <NavLink to="/chart-building-algorithm/draw-line">
+                        Draw line
+                    </NavLink>
+                </li>
             </ol>
         </Chapter>
     );
