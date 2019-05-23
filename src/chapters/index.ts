@@ -4,3 +4,8 @@ export * from "./C3_SvgGeometry";
 export * from "./C4_SvgShapes";
 export * from "./C5_LineChart";
 export * from "./C6_ChartBuildingAlgorithm";
+export * from "./C6_1_PrepareData";
+export * from "./C6_2_CreateSVG";
+export * from "./C6_3_DefineBounds";
+export * from "./C6_4_DrawAxis";
+export * from "./C6_5_DefineScales";

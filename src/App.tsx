@@ -7,7 +7,12 @@ import {
     C3_SvgGeometry,
     C4_SvgShapes,
     C5_LineChart,
-    C6_ChartBuildingAlgorithm
+    C6_ChartBuildingAlgorithm,
+    C6_1_PrepareData,
+    C6_2_CreateSVG,
+    C6_3_DefineBounds,
+    C6_4_DrawAxis,
+    C6_5_DefineScales
 } from "./chapters";
 
 export function App() {
@@ -36,6 +41,33 @@ export function App() {
                         <NavLink to="/chart-building-algorithm/">
                             5. D3 + React: Chart building algorithm
                         </NavLink>
+                        <ul>
+                            <li>
+                                <NavLink to="/chart-building-algorithm/prepare-data">
+                                    5.1 Prepare data
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/chart-building-algorithm/create-svg">
+                                    5.2 Create SVG
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/chart-building-algorithm/define-bounds">
+                                    5.3 Define Bounds
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/chart-building-algorithm/draw-axis">
+                                    5.4 Draw axis
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/chart-building-algorithm/define-scales">
+                                    5.5 Define scales
+                                </NavLink>
+                            </li>
+                        </ul>
                     </li>
                     <li>
                         <NavLink to="/line-chart/">6. Line Chart</NavLink>
@@ -48,7 +80,28 @@ export function App() {
                     <Route path="/line-chart" component={C5_LineChart} />
                     <Route
                         path="/chart-building-algorithm/"
+                        exact
                         component={C6_ChartBuildingAlgorithm}
+                    />
+                    <Route
+                        path="/chart-building-algorithm/prepare-data"
+                        component={C6_1_PrepareData}
+                    />
+                    <Route
+                        path="/chart-building-algorithm/create-svg"
+                        component={C6_2_CreateSVG}
+                    />
+                    <Route
+                        path="/chart-building-algorithm/define-bounds"
+                        component={C6_3_DefineBounds}
+                    />
+                    <Route
+                        path="/chart-building-algorithm/draw-axis"
+                        component={C6_4_DrawAxis}
+                    />
+                    <Route
+                        path="/chart-building-algorithm/define-scales"
+                        component={C6_5_DefineScales}
                     />
                     <Route path="/" exact component={C1_Intro} />
                 </div>
