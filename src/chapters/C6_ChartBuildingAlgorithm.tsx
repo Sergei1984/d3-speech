@@ -85,7 +85,13 @@ function LineChart() {
             `}</CodeBlock>
             <h3>5. Create scales for horizontal and vertical coordinates</h3>
             <p>
-                <a href="https://github.com/d3/d3-scale">Scale is D3</a>{" "}
+                <a href="https://github.com/d3/d3-scale">Scale in D3</a> is a
+                special object which allows to map a value from chart data to
+                coordinate in SVG document; and also have some useful features
+                like generate a ticks etc.
+            </p>
+            <p>
+                There are few types of <code>scales</code>:
             </p>
         </Chapter>
     );
