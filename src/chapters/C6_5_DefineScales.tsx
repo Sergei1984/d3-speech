@@ -103,10 +103,11 @@ console.log(amountScale(10000)); // Would output HEIGHT * 10000 / 1500000
                 </tbody>
             </table>
             <p>
-                then domain of <b>Profit</b> could be either{" "}
+                then domain of <b>Profit</b> dimension could be either{" "}
                 <code>[0, 112000]</code> or <code>[42000, 112000]</code>, or
                 even <code>[10000, 200000]</code>. Depending on that the line on
-                chart will have different zoom and lower and upper bounds.
+                chart will have different zoom and lower and upper bounds for
+                Profit axis.
             </p>
             <h4>Range</h4>
             <p>
@@ -137,6 +138,14 @@ console.log(amountScale(10000)); // Would output HEIGHT * 10000 / 1500000
                     - returns given count of uniformly spaced human-readable
                     values within scale's domain. Used for showing tick marks on
                     corresponding axis.
+                </li>
+                <li>
+                    <a href="https://github.com/d3/d3-scale#continuous_nice">
+                        <code>nice</code>
+                    </a>{" "}
+                    - extend a domain to start and ends with some nice values,
+                    usually rounds min and max values of domain to closest
+                    human-readable values.
                 </li>
             </ul>
         </Chapter>
