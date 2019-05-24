@@ -1,29 +1,11 @@
-# What is D3
+# Usage D3 with React
 
-# D3 vs config-based chart libs
+Text and code
 
-# D3 + React
+## How to run
 
-# SVG basics
-
-## svg
-
-### viewport
-
-## path
-
-## line
-
-## circle
-
-## text
-
-# D3 basics
-
-## Scales
-
-## Shapes: arc, pie, line, area
-
-## Utils
-
-# AutoScale SVG
+* Clone this repo
+* Open terminal and switch to the directory
+* Run `npm i`
+* Run `npm run start`
+* Open browser at http://localhost:3211/
