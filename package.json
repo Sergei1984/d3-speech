@@ -43,6 +43,6 @@
   },
   "devDependencies": {
     "less": "^3.9.0",
-    "marked": "^0.6.2"
+    "marked": "^4.0.10"
   }
 }
